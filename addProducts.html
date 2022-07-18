@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Management App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Product Management App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./myProducts.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="row justify-content-md-center">
+          <form
+            class="input-form"
+            method="post"
+            action="#"
+            id="addProductForm"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mb-3 col-md-8 offset-md-2 fs-5 fw-bold lh-md"
+              id="notice"
+            >
+              Please Enter All Details To Add A Product
+            </div>
+            <div class="mb-3 col-md-8 offset-md-2">
+              <label for="fullname">Product Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="productName"
+                placeholder="Please Enter Your productName"
+              />
+            </div>
+            <div class="mb-3 col-md-8 offset-md-2">
+              <label for="productLocation" class="form-label"
+                >Product Location</label
+              >
+              <input type="text" class="form-control" id="productLocation" />
+            </div>
+            <div class="mb-3 col-md-8 offset-md-2">
+              <label for="productImage" class="form-label">Phone Image</label>
+              <input
+                type="file"
+                class="form-control"
+                id="productImage"
+                required
+              />
+            </div>
+            <div class="mb-3 col-md-8 offset-md-2">
+              <label for="productComment" class="form-label"
+                >Product Comment</label
+              >
+              <textarea
+                class="form-control"
+                id="productComment"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="mb-3 col-md-8 offset-md-2">
+              <button id="btn" type="submit" class="btn btn-default">
+                Add New Product
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/checkUserToken.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/addProduct.js"></script>
+  </body>
+</html>
