@@ -11,3 +11,8 @@ checkToken = function () {
         return userToken.UserToken;
     }
 }
+
+document.getElementById("logout").addEventListener("click", function () {
+    localStorage.removeItem("tokenDetails");
+    window.location.href = "./index.html?err=Successfully Logged Out";
+})
